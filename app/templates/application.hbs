@@ -8,19 +8,16 @@
     </h1>
   </div>
   <div class="rr-main-content">
-    <ul class="list pa0 ma0">
-      {{#each model as |song|}}
-        <li>
-          {{song.title}}
-          by
-          <em>
-            {{song.band}}
-          </em>
-          <span class="rating fr">
-            {{song.rating}}
-          </span>
+    <nav class="rr-navbar" role="navigation">
+      <ul class="rr-nav">
+        <li class="rr-navbar-item">
+          {{link-to "Bands" "bands"}}
         </li>
-      {{/each}}
-    </ul>
+        <li class="rr-navbar-item">
+          {{link-to "Songs" "songs"}}
+        </li>
+      </ul>
+    </nav>
+    {{outlet}}
   </div>
 </div>
