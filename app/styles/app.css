@@ -79,3 +79,30 @@ a {
 .list > li {
   margin-bottom: 10px;
 }
+
+.rr-sidebar {
+  float: left;
+  width: calc(100% / 3);
+}
+
+.rr-main-panel {
+  float: left;
+  width: calc(100% / 1.5);
+}
+
+.rr-list {
+  list-style-type: none;
+}
+
+.rr-list-item {
+  margin-bottom: 10px;
+}
+
+.rr-band-link > .rr-pointer {
+  margin-left: 5px;
+  display: none;
+}
+
+.rr-band-link.active > .rr-pointer {
+  display: inline-block;
+}

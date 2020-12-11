@@ -1,7 +1,17 @@
-<ul class="list p13">
-  {{#each model as |band|}}
-    <li>
-      {{band.name}}
-    </li>
-  {{/each}}
-</ul>
+<div class="rr-sidebar">
+  <ul class="rr-list">
+    {{#each model as |band|}}
+      <li class="rr-list-item">
+        {{#link-to "bands.band.songs" band class="rr-band-link"}}
+          {{band.name}}
+          <span class="rr-pointer">
+            {{fa-icon "angle-right"}}
+          </span>
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
+<div class="rr-main-panel">
+  {{outlet}}
+</div>

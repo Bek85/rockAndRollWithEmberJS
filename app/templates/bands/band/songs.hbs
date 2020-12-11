@@ -1,0 +1,16 @@
+<ul class="rr-list">
+  {{#each model.songs as |song|}}
+    <li class="rr-list-">
+      {{song.title}}
+      <span class="rr-rating fr">
+        {{song.rating}}
+      </span>
+    </li>
+  {{else}}
+    <li class="tc">
+      No
+      {{model.name}}
+      songs yet.
+    </li>
+  {{/each}}
+</ul>
