@@ -3,6 +3,16 @@
 :root {
   --bright-yellow: #ffda00;
   --navitem-link-color: var(--bright-yellow);
+  --blue: #357edd;
+  --dark-blue: #00449e;
+  --light-blue: #96ccff;
+  --mid-grey: #555;
+  --near-white: #f4f4f4;
+  --input-color: var(--mid-grey);
+  --button-color: var(--near-white);
+  --button-bg-color: var(--blue);
+  --button-hover-color: var(--dark-blue);
+  --button-disabled-color: var(--light-blue);
 }
 
 .rr-navbar {
@@ -105,4 +115,50 @@ a {
 
 .rr-band-link.active > .rr-pointer {
   display: inline-block;
+}
+
+.rr-new-label {
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+
+.rr-input {
+  color: var(--input-color);
+  border-style: solid;
+  border-width: 1px;
+  padding: 0.25rem;
+}
+
+.rr-action-button {
+  color: var(--button-color);
+  background-color: var(--button-bg-color);
+  border-radius: 0.125rem;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.rr-action-button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.rr-action-button[disabled] {
+  background-color: var(--button-disabled-color);
+}
+
+.rr-cancel-icon {
+  align-self: center;
+  margin-left: 0.25rem;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+.rr-inline-form {
+  display: flex;
+}
+
+.rr-inline-form-group {
+  display: flex;
+  justify-content: space-between;
 }
