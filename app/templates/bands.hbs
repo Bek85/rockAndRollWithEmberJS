@@ -13,22 +13,24 @@
   </ul>
   <div class="rr-new-label">
     {{#if isAddingBand}}
-      {{input
-        type="text"
-        class="rr-input"
-        value=newBandName
-        placeholder="New band"
-      }}
-      <button
-        type="button"
-        class="rr-action-button"
-        onclick={{action "saveBand"}}
-      >
-        Add
-      </button>
-      <button class="rr-cancel-icon" onclick={{action "cancelAddBand"}}>
-        {{fa-icon "times"}}
-      </button>
+      <form class="rr-inline-form" onsubmit={{action "saveBand"}}>
+        {{input
+          type="text"
+          class="rr-input"
+          value=newBandName
+          placeholder="New band"
+        }}
+        <button
+          type="submit"
+          class="rr-action-button"
+          disabled={{isAddButtonDisabled}}
+        >
+          Add
+        </button>
+        <button class="rr-cancel-icon" onclick={{action "cancelAddBand"}}>
+          {{fa-icon "times"}}
+        </button>
+      </form>
     {{else}}
       <label onclick={{action "addBand"}}>
         {{fa-icon "plus"}}
