@@ -1,0 +1,9 @@
+{{#each stars as |star|}}
+  <button class="rating-star">
+    {{#if star.isFull}}
+      {{fa-icon "star"}}
+    {{else}}
+      {{fa-icon "star-0"}}
+    {{/if}}
+  </button>
+{{/each}}

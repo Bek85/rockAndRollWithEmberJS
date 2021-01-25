@@ -2,9 +2,7 @@
   {{#each model.songs as |song|}}
     <li class="rr-list-">
       {{song.title}}
-      <span class="rr-rating fr">
-        {{song.rating}}
-      </span>
+      <StarRating class="fr" @rating={{song.rating}} />
     </li>
   {{else}}
     <li class="tc">
