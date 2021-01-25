@@ -1,0 +1,14 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.rr-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.rr-container:after {
+  clear: both;
+}

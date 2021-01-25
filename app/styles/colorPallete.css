@@ -1,0 +1,14 @@
+:root {
+  --bright-yellow: #ffda00;
+  --navitem-link-color: var(--bright-yellow);
+  --blue: #357edd;
+  --dark-blue: #00449e;
+  --light-blue: #96ccff;
+  --mid-grey: #555;
+  --near-white: #f4f4f4;
+  --input-color: var(--mid-grey);
+  --button-color: var(--near-white);
+  --button-bg-color: var(--blue);
+  --button-hover-color: var(--dark-blue);
+  --button-disabled-color: var(--light-blue);
+}

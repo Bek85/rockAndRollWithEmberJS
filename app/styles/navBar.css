@@ -1,0 +1,29 @@
+.rr-navbar {
+  position: relative;
+  min-height: 50px;
+  border: 1px solid transparent;
+}
+
+.rr-navbar > .rr-nav {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.rr-navbar-item {
+  padding: 5px;
+}
+
+.rr-navbar-item > a:hover {
+  border-bottom: 2px solid var(--navitem-link-color);
+}
+
+.rr-navbar-item > a.active {
+  color: inherit;
+  border-bottom: 2px solid var(--navitem-link-color);
+}
+
+.rr-navbar-item + .rr-navbar-item {
+  margin-left: 10px;
+}

@@ -1,94 +1,15 @@
 /* app/styles/app.css */
+@import './general.css';
+@import './colorPallete.css';
+@import './navBar.css';
+@import './pageHeader.css';
+@import './ratingStar.css';
+@import './responsive.css';
 
-:root {
-  --bright-yellow: #ffda00;
-  --navitem-link-color: var(--bright-yellow);
-  --blue: #357edd;
-  --dark-blue: #00449e;
-  --light-blue: #96ccff;
-  --mid-grey: #555;
-  --near-white: #f4f4f4;
-  --input-color: var(--mid-grey);
-  --button-color: var(--near-white);
-  --button-bg-color: var(--blue);
-  --button-hover-color: var(--dark-blue);
-  --button-disabled-color: var(--light-blue);
-}
 
-.rr-navbar {
-  position: relative;
-  min-height: 50px;
-  border: 1px solid transparent;
-}
-
-.rr-navbar > .rr-nav {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.rr-navbar-item {
-  padding: 5px;
-}
-
-.rr-navbar-item > a:hover {
-  border-bottom: 2px solid var(--navitem-link-color);
-}
-
-.rr-navbar-item > a.active {
-  color: inherit;
-  border-bottom: 2px solid var(--navitem-link-color);
-}
-
-.rr-navbar-item + .rr-navbar-item {
-  margin-left: 10px;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.rr-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
-.rr-container:after {
-  clear: both;
-}
-
-@media screen and (min-width: 320px) and (max-width: 960px) {
-  .rr-container {
-    width: 80%;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .rr-container {
-    width: 50%;
-  }
-}
-
-.rr-page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
-  border-bottom: 1px solid;
-}
-
-.rr-page-header > .rr-app-title {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.rr-app-title > .rr-subtitle {
-  font-weight: normal;
-}
-
-.list > li {
+/* .list > li {
   margin-bottom: 10px;
-}
+} */
 
 .rr-sidebar {
   float: left;
@@ -102,6 +23,7 @@ a {
 
 .rr-list {
   list-style-type: none;
+  margin-bottom: 15px;
 }
 
 .rr-list-item {
@@ -163,11 +85,4 @@ a {
   justify-content: space-between;
 }
 
-.rating-star {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  color: inherit;
-  background-color: inherit;
-}
+

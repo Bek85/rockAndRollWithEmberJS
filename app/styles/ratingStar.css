@@ -1,0 +1,8 @@
+.rating-star {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  background-color: inherit;
+}
