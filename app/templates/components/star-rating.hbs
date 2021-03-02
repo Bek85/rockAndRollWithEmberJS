@@ -1,9 +1,18 @@
-{{#each stars as |star|}}
-  <button class="rating-star">
-    {{#if star.isFull}}
-      {{fa-icon "star"}}
-    {{else}}
-      {{fa-icon "star-0"}}
-    {{/if}}
-  </button>
-{{/each}}
+{{#if hasBlock}}
+  {{yield stars}}
+{{else}}
+  {{#each this.stars as |star|}}
+    <button
+      type="button"
+      class="rating-star"
+      {{on "click" (fn this.setRating star.rating)}}
+    >
+      {{#if star.isFull}}
+        <FaIcon @icon="star" />
+      {{else}}
+        <FaIcon @icon="star" @prefix="far" />
+      {{/if}}
+    </button>
+  {{/each}}
+  {{!-- {{log stars}} --}}
+{{/if}}

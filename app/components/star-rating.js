@@ -1,5 +1,5 @@
 import Component from "@ember/component";
-import { computed } from "@ember/object";
+import { computed, action } from "@ember/object";
 
 export default Component.extend({
   classNames: ["rating-panel"],
@@ -7,11 +7,20 @@ export default Component.extend({
   rating: 0,
   maxRating: 5,
 
+  onClick() {},
+
   stars: computed("rating", "maxRating", function () {
     let stars = [];
     for (let i = 1; i <= this.maxRating; i++) {
       stars.push({ rating: i, isFull: this.rating >= i });
     }
     return stars;
+  }),
+
+  setRating: action(function (newRating) {
+    return this.onClick({
+      item: this.item,
+      rating: newRating,
+    });
   }),
 });
