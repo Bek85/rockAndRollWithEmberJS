@@ -4,11 +4,16 @@
   border-bottom: 1px solid;
 }
 
-.rr-page-header > .rr-app-title {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .rr-app-title > .rr-subtitle {
   font-weight: normal;
+}
+
+.rr-panel {
+  padding: 1rem;
+  border: 0.125rem solid;
+  border-radius: 0.125rem;
+}
+.rr-textarea {
+  width: 100%;
+  padding: 0.5rem;
 }

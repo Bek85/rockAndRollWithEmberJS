@@ -1,11 +1,13 @@
 <div class="rr-container">
   <div class="rr-page-header">
-    <h1 class="rr-app-title">
-      Rock & Roll
-      <small class="rr-subtitle">
-        with Ember.js
-      </small>
-    </h1>
+    <LinkTo @route="index" class="rr-header-link">
+      <h1 class="rr-app-title">
+        Rock & Roll
+        <small class="rr-subtitle">
+          with Ember.js
+        </small>
+      </h1>
+    </LinkTo>
   </div>
   <div class="rr-main-content">
     {{outlet}}
