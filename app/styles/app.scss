@@ -1,11 +1,10 @@
 /* app/styles/app.css */
-@import './general.css';
-@import './colorPallete.css';
-@import './navBar.css';
-@import './pageHeader.css';
-@import './ratingStar.css';
-@import './responsive.css';
-
+@import "_general";
+@import "_colorPallete";
+@import "_navBar";
+@import "_pageHeader";
+@import "_ratingStar";
+@import "_responsive";
 
 /* .list > li {
   margin-bottom: 10px;
@@ -84,5 +83,3 @@
   display: flex;
   justify-content: space-between;
 }
-
-

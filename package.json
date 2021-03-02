@@ -32,6 +32,7 @@
     "ember-cli-eslint": "^5.1.0",
     "ember-cli-htmlbars": "^4.0.5",
     "ember-cli-inject-live-reload": "^2.0.1",
+    "ember-cli-sass": "^10.0.1",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-tachyons-shim": "^4.9.1",
     "ember-cli-template-lint": "^1.0.0-beta.3",
@@ -47,7 +48,9 @@
     "eslint-plugin-ember": "^7.1.0",
     "eslint-plugin-node": "^10.0.0",
     "loader.js": "^4.7.0",
+    "node-sass": "^5.0.0",
     "qunit-dom": "^0.9.0",
+    "sass": "^1.32.8",
     "tachyons": "^4.9.1"
   },
   "engines": {
