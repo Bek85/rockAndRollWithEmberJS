@@ -36,6 +36,8 @@ export default class BandsRoute extends Route {
     let pearlJam = Band.create({
       name: "Pearl Jam",
       songs: A([yellowLedbetter, daughter]),
+      description:
+        "Pearl Jam is an American rock band, formed in Seattle, Washington in 1990.",
     });
     let fooFighters = Band.create({
       name: "Foo Fighters",
