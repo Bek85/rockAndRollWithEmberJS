@@ -5,7 +5,7 @@
         {{#link-to "bands.band.songs" band class="rr-band-link"}}
           {{band.name}}
           <span class="rr-pointer">
-            {{fa-icon "angle-right"}}
+            <FaIcon @icon="angle-right" />
           </span>
         {{/link-to}}
       </li>
@@ -28,12 +28,12 @@
           Add
         </button>
         <button class="rr-cancel-icon" onclick={{action "cancelAddBand"}}>
-          {{fa-icon "times"}}
+          <FaIcon @icon="times" />
         </button>
       </form>
     {{else}}
       <label onclick={{action "addBand"}}>
-        {{fa-icon "plus"}}
+        <FaIcon @icon="plus" />
         <span class="ml1">
           Add new band
         </span>

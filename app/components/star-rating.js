@@ -2,7 +2,7 @@ import Component from "@ember/component";
 import { computed } from "@ember/object";
 
 export default Component.extend({
-  className: ["rating-panel"],
+  classNames: ["rating-panel"],
 
   rating: 0,
   maxRating: 5,

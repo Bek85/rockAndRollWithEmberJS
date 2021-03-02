@@ -3,7 +3,7 @@ import { A } from "@ember/array";
 import Band from "rarwe/models/band";
 import Song from "rarwe/models/song";
 
-export default Route.extend({
+export default class BandsRoute extends Route {
   model() {
     let blackDog = Song.create({
       title: "Black Dog",
@@ -43,5 +43,5 @@ export default Route.extend({
     });
 
     return A([ledZeppelin, pearlJam, fooFighters]);
-  },
-});
+  }
+}

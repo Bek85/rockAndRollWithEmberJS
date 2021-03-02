@@ -20,6 +20,8 @@
   "devDependencies": {
     "@ember/jquery": "^0.6.0",
     "@ember/optional-features": "^0.7.0",
+    "@fortawesome/ember-fontawesome": "^0.2.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "broccoli-asset-rev": "^3.0.0",
     "ember-ajax": "^5.0.0",
     "ember-cli": "~3.10.1",
@@ -36,7 +38,6 @@
     "ember-cli-uglify": "^2.1.0",
     "ember-data": "~3.10.0",
     "ember-export-application-global": "^2.0.0",
-    "ember-font-awesome": "^4.0.0-rc.4",
     "ember-load-initializers": "^2.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-qunit": "^4.4.1",
