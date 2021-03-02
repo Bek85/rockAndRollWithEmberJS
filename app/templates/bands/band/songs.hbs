@@ -5,8 +5,7 @@
       <StarRating
         class="fr"
         @rating={{song.rating}}
-        @item={{song}}
-        @onClick={{this.updateRating}}
+        @onClick={{fn this.updateRating song}}
       />
     </li>
   {{else}}

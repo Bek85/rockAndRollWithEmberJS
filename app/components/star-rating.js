@@ -18,9 +18,6 @@ export default Component.extend({
   }),
 
   setRating: action(function (newRating) {
-    return this.onClick({
-      item: this.item,
-      rating: newRating,
-    });
+    return this.onClick(newRating);
   }),
 });
