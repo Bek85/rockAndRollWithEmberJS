@@ -2,7 +2,7 @@
   <ul class="rr-list">
     {{#each this.model as |band|}}
       <li class="rr-list-item">
-        {{#link-to "bands.band" band.slug class="rr-band-link"}}
+        {{#link-to "bands.band.index" band.slug class="rr-band-link"}}
           {{band.name}}
           <span class="rr-pointer">
             <FaIcon @icon="angle-right" />
