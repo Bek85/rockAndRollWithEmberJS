@@ -9,4 +9,11 @@ export default class BandRoute extends Route {
     let bands = this.modelFor("bands");
     return bands.find((band) => band.slug === params.slug);
   }
+
+  resetController() {
+    this.controllerFor("bands").setProperties({
+      isAddingBand: false,
+      newBandName: "",
+    });
+  }
 }
