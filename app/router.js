@@ -13,7 +13,6 @@ export default class Router extends EmberRouter {
 
   setDocumentTitle() {
     this.on("routeDidChange", (transition) => {
-      console.log("transition object: ", transition);
       if (!transition.to) {
         return;
       }
@@ -27,7 +26,6 @@ export default class Router extends EmberRouter {
           let bandRouteInfo = transition.to.find((info) =>
             info.name.includes("bands.band")
           );
-          console.log("bandRouteInfo object: ", bandRouteInfo);
           let bandSlug = bandRouteInfo.params.slug;
           let bandName = bandSlug
             .split("-")
@@ -38,7 +36,6 @@ export default class Router extends EmberRouter {
       };
       let titleSegments = [];
       let titleSetter = pageTitles[toRouteName];
-      console.log("titleSetter: ", titleSetter);
       if (titleSetter) {
         titleSegments.push(titleSetter());
       }
