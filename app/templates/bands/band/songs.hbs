@@ -23,13 +23,13 @@
       onsubmit={{action "saveSong"}}
       data-test-rr="new-song-form"
     >
-      {{input
-        type="text"
+      <Input
+        @type="text"
         class="rr-input"
-        value=newSongTitle
+        @value={{this.newSongTitle}}
         placeholder="New song"
         data-test-rr="new-song-input"
-      }}
+      />
       <button
         type="submit"
         class="rr-action-button"

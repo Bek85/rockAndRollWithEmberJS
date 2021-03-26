@@ -19,13 +19,13 @@
   <div class="rr-new-label">
     {{#if isAddingBand}}
       <form class="rr-inline-form" onsubmit={{action "saveBand"}}>
-        {{input
-          type="text"
+        <Input
+          @type="text"
           class="rr-input"
-          value=newBandName
+          @value={{this.newBandName}}
           placeholder="New band"
           data-test-rr="new-band-input"
-        }}
+        />
         <button
           type="submit"
           class="rr-action-button"
