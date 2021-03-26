@@ -21,15 +21,13 @@ export default class SongsController extends Controller {
   @action
   async saveSong(evt) {
     evt.preventDefault();
-    // let newSong = Song.create({ title: this.newSongTitle });
-    // this.model.songs.pushObject(newSong);
+
     let newSong = this.store.createRecord("song", {
       title: this.get("newSongTitle"),
       band: this.model,
     });
     await newSong.save();
     this.set("newSongTitle", "");
-    // console.log(this.model);
   }
 
   @action

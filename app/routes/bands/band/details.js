@@ -8,7 +8,6 @@ export default class DetailsRoute extends Route {
     super(...arguments);
     this.router.on("routeWillChange", (transition) => {
       if (!transition.from) return;
-      // console.log(transition.to.name, transition.from.name);
       if (transition.to.name === transition.from.name) return;
 
       let controller = this.controller;
