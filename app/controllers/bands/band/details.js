@@ -5,7 +5,14 @@ export default class DetailsController extends Controller {
   isEditing = false;
 
   @action
-  toggleIsEditing() {
-    this.toggleProperty("isEditing");
+  edit() {
+    this.set("isEditing", true);
+  }
+
+  @action
+  async save() {
+    let band = this.model;
+    await band.save();
+    this.set("isEditing", false);
   }
 }

@@ -2,7 +2,7 @@
   <button
     type="button"
     class="rr-action-button fr"
-    {{on "click" this.toggleIsEditing}}
+    {{on "click" (if this.isEditing this.save this.edit)}}
   >
     {{if this.isEditing "Save" "Edit"}}
   </button>
