@@ -1,7 +1,7 @@
-import EmberObject from "@ember/object";
+import Model, { attr, belongsTo } from "@ember-data/model";
 
-export default EmberObject.extend({
-  title: "",
-  rating: 0,
-  band: null,
-});
+export default class SongModel extends Model {
+  @attr() title;
+  @attr("number") rating;
+  @belongsTo() band;
+}
