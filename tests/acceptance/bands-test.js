@@ -12,7 +12,7 @@ module("Acceptance | Bands", function (hooks) {
     this.server.create("band", { name: "Long Distance Calling" });
     await visit("/");
 
-    let bandLinks = document.querySelectorAll(".rr-band-link");
+    let bandLinks = document.querySelectorAll("[data-test-rr=band-link]");
     assert.equal(bandLinks.length, 2, "All band links are rendered");
     assert.ok(
       bandLinks[0].textContent.includes("Radiohead"),
@@ -28,11 +28,11 @@ module("Acceptance | Bands", function (hooks) {
     this.server.create("band", { name: "Royal Blood" });
 
     await visit("/");
-    await click("label");
-    await fillIn(".rr-input", "Caspian");
-    await click(".rr-action-button");
+    await click("[data-test-rr=new-band-label]");
+    await fillIn("[data-test-rr=new-band-input]", "Caspian");
+    await click("[data-test-rr=new-band-button]");
 
-    let bandLinks = document.querySelectorAll(".rr-band-link");
+    let bandLinks = document.querySelectorAll("[data-test-rr=band-link]");
     assert.equal(
       bandLinks.length,
       2,
@@ -45,7 +45,7 @@ module("Acceptance | Bands", function (hooks) {
     );
     assert.ok(
       document
-        .querySelector(".rr-navbar-item > .active")
+        .querySelector("[data-test-rr=songs-nav-item]")
         .textContent.includes("Songs"),
       "The Songs tab is active"
     );
