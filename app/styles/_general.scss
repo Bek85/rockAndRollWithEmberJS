@@ -65,9 +65,10 @@ a {
   color: var(--button-color);
   background-color: var(--button-bg-color);
   border-radius: 0.125rem;
-  padding: 0.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 .rr-action-button:hover {
