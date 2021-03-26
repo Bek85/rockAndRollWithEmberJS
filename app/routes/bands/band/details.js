@@ -4,8 +4,8 @@ import { inject as service } from "@ember/service";
 export default class DetailsRoute extends Route {
   @service router;
 
-  init() {
-    this._super();
+  constructor() {
+    super(...arguments);
     this.router.on("routeWillChange", (transition) => {
       if (!transition.from) return;
       console.log(transition.to.name, transition.from.name);

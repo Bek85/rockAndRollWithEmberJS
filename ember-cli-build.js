@@ -8,6 +8,9 @@ module.exports = function (defaults) {
     sassOptions: {
       implementation: nodeSass,
     },
+    "ember-fetch": {
+      preferNative: true,
+    },
     // Add options here
   });
 

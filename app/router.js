@@ -6,8 +6,8 @@ export default class Router extends EmberRouter {
   location = config.locationType;
   rootURL = config.rootURL;
 
-  init() {
-    this._super();
+  constructor() {
+    super(...arguments);
     this.setDocumentTitle();
   }
 
@@ -26,8 +26,8 @@ export default class Router extends EmberRouter {
           let bandRouteInfo = transition.to.find((info) =>
             info.name.includes("bands.band")
           );
-          let bandSlug = bandRouteInfo.params.slug;
-          let bandName = bandSlug
+          let bandId = bandRouteInfo.params.id;
+          let bandName = bandId
             .split("-")
             .map((s) => capitalize(s))
             .join("");
@@ -50,7 +50,7 @@ Router.map(function () {
     this.route(
       "band",
       {
-        path: ":slug",
+        path: ":id",
       },
       function () {
         this.route("songs");

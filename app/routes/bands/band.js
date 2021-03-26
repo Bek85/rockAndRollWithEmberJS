@@ -6,8 +6,7 @@ export default class BandRoute extends Route {
 
   model(params) {
     // console.log("Model hook called for `bands.band` called with", params.slug);
-    let bands = this.modelFor("bands");
-    return bands.find((band) => band.slug === params.slug);
+    return this.store.findRecord("band", params.id);
   }
 
   resetController() {
