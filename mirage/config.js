@@ -1,7 +1,7 @@
 export default function () {
-  this.get("/bands");
-  this.get("/bands/:id");
-  this.post("/bands");
+  this.get('/bands');
+  this.get('/bands/:id');
+  this.post('/bands');
 
   // These comments are here to help you get started. Feel free to delete them.
 

@@ -5,12 +5,13 @@
     <button
       type="button"
       class="rating-star"
-      {{on "click" (fn this.setRating star.rating)}}
+      data-test-rr={{concat 'star-rating-' star.rating}}
+      {{on 'click' (fn this.setRating star.rating)}}
     >
       {{#if star.isFull}}
-        <FaIcon @icon="star" />
+        <FaIcon @icon="star" class="full-star" />
       {{else}}
-        <FaIcon @icon="star" @prefix="far" />
+        <FaIcon @icon="star" @prefix="far" class="empty-star" />
       {{/if}}
     </button>
   {{/each}}
