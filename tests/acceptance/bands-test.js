@@ -1,7 +1,8 @@
 import { module, test } from 'qunit';
-import { visit, click, fillIn } from '@ember/test-helpers';
+import { visit } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import { setupMirage } from 'ember-cli-mirage/test-support';
+import { createBand } from 'rarwe/tests/helpers/custom-helpers';
 
 module('Acceptance | Bands', function (hooks) {
   setupApplicationTest(hooks);
@@ -40,9 +41,12 @@ module('Acceptance | Bands', function (hooks) {
     this.server.create('band', { name: 'Royal Blood' });
 
     await visit('/');
-    await click('[data-test-rr=new-band-label]');
-    await fillIn('[data-test-rr=new-band-input]', 'Caspian');
-    await click('[data-test-rr=new-band-button]');
+
+    // await click('[data-test-rr=new-band-label]');
+    // await fillIn('[data-test-rr=new-band-input]', 'Caspian');
+    // await click('[data-test-rr=new-band-button]');
+
+    await createBand('Caspian');
 
     // let bandLinks = document.querySelectorAll('[data-test-rr=band-link]');
     // assert.equal(
