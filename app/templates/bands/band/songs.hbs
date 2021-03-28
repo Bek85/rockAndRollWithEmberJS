@@ -21,7 +21,7 @@
     <form
       class="rr-inline-form"
       data-test-rr="new-song-form"
-      {{on "submit" this.saveSong}}
+      {{on 'submit' this.saveSong}}
     >
       <Input
         @type="text"
@@ -38,13 +38,13 @@
       >
         Add
       </button>
-      <button class="rr-cancel-icon" {{on "click" this.cancelAddSong}}>
-        {{fa-icon "times"}}
+      <button class="rr-cancel-icon" {{on 'click' this.cancelAddSong}}>
+        {{fa-icon 'times'}}
       </button>
     </form>
   {{else}}
-    <label data-test-rr="new-song-label" {{on "click" this.addSong}}>
-      {{fa-icon "plus"}}
+    <label data-test-rr="new-song-label" {{on 'click' this.addSong}}>
+      {{fa-icon 'plus'}}
       <span class="ml1">
         Add new song
       </span>
