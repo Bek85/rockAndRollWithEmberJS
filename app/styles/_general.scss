@@ -101,3 +101,36 @@ a {
 //   color: var(--near-white);
 //   background-color: var(--mid-grey) !important;
 // }
+
+.rr-controls-panel {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 0;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.rr-search-panel {
+  margin-left: auto;
+}
+
+.rr-sort-button {
+  background-color: var(--mid-grey);
+  color: var(--near-white);
+  border: 0;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+
+.rr-search-icon {
+  display: inline-block;
+  color: var(--mid-grey);
+  background-color: white;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: -5px;
+  border-width: 0;
+}
