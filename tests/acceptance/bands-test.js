@@ -39,6 +39,7 @@ module('Acceptance | Bands', function (hooks) {
 
   test('Create a band', async function (assert) {
     this.server.create('band', { name: 'Royal Blood' });
+    this.server.logging = true;
 
     await visit('/');
 
